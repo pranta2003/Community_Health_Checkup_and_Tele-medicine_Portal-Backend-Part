@@ -123,6 +123,7 @@ doctor-portal/
 └── pom.xml                               -> Maven dependencies
 
 
+```
 ## ⚙️ Requirements
 
 | Dependency | Version |
@@ -191,6 +192,7 @@ Commit & push
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+
 
 
 
