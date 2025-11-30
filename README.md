@@ -1,132 +1,146 @@
-# Community Health Check & Telemedicine Portal
+# 🌐 Community Health Check & Telemedicine Portal  
+A modern full-stack medical portal for small clinics & NGOs to manage community health checks, telemedicine sessions, and basic health utilities — powered by **Spring Boot (Backend)** and a clean **Tailwind + DaisyUI (Frontend)**.
 
-[![Repo size](https://img.shields.io/badge/size-medium-blue.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
-[![Status](https://img.shields.io/badge/status-development-yellow.svg)]()
+<div align="center">
 
-> A lightweight portal to let small clinics and NGOs manage community health checks and offer telemedicine consultations — built with Spring Boot (backend) and a responsive frontend (Tailwind + DaisyUI).
+![size](https://img.shields.io/badge/Project%20Size-Medium-blue?style=for-the-badge)
+![license](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![development](https://img.shields.io/badge/Status-Development-yellow?style=for-the-badge)
+![spring](https://img.shields.io/badge/Backend-SpringBoot-brightgreen?style=for-the-badge)
+![frontend](https://img.shields.io/badge/Frontend-TailwindCSS-blue?style=for-the-badge)
 
----
-
-## 🎬 Demo / Animated Preview
-> Add an animated GIF here (record a short screen demo and upload it to the repo, then replace the GIF URL below)
-
-![Demo GIF](docs/demo.gif)
+</div>
 
 ---
 
-## 🚀 Quick highlights
-- Book / manage appointments (doctor + patient)
-- Teleconsultation (Jitsi integration)
-- Basic health utilities (BMI, glucose logging)
-- JWT-based authentication & role-based access control
-- RESTful API design, DTOs, and structured service-repository layers
+## 🎬 Live Demo / Animated Preview  
+> Replace the GIF below with your own screen recording (`docs/demo.gif`).
+
+<p align="center">
+  <img src="docs/demo.gif" alt="Application Demo" width="750px">
+</p>
 
 ---
 
-## 📁 Project structure
+## 🚀 Key Features
+
+### 🩺 **Appointment Management**
+- Patients & doctors can book/manage appointments.
+- Clean RESTful API endpoints.
+- Calendar & time-slot selection (future enhancement-ready).
+
+### 📞 **Telemedicine (Video Call)**
+- Jitsi Meet API integrated.
+- One-click online consultation.
+
+### 🧮 **Health Utilities**
+- BMI Calculator  
+- Glucose Logging  
+- Extendable design for future vitals (BP, SPO₂, etc.)
+
+### 🔐 **Security & Auth**
+- JWT Authentication  
+- Role-based Access Control → Admin, Doctor, Patient  
+- Secure API layer with CORS setup  
+
+### 🧱 **Clean Architecture**
+- DTO-driven communication  
+- Layered structure → Controller → Service → Repository  
+- Global Exception Handlers  
+- Reusable ApiResponse model  
+
+---
+
+## 📁 Project Structure (Visual Tree)
+
 doctor-portal/
+│
 ├─ src/
 │ ├─ main/
 │ │ ├─ java/com/pranta/doctor_portal/
-│ │ │ ├─ appointment/ # Appointment model, DTOs, controller, service, repository
-│ │ │ ├─ user/ # User, roles, security, user service
-│ │ │ ├─ health/ # BMI/glucose controllers + DTOs
-│ │ │ ├─ contact/ # Contact form message
-│ │ │ ├─ common/ # ApiResponse, error handlers, global exceptions
+│ │ │ ├─ appointment/ # Appointment model, DTOs, controller, service, repo
+│ │ │ ├─ user/ # User roles, security config, auth, services
+│ │ │ ├─ health/ # BMI + Glucose controllers + DTOs
+│ │ │ ├─ contact/ # Contact form handling
+│ │ │ ├─ common/ # ApiResponse, global exceptions
 │ │ │ └─ DoctorPortalApplication.java
-│ └─ resources/
-│ ├─ application.properties
-│ └─ static/
+│ │ │
+│ │ └─ resources/
+│ │ ├─ application.properties
+│ │ └─ static/
+│ │
+│ └─ test/
+│
 └─ pom.xml
 
 
 ---
 
 ## ⚙️ Requirements
-- Java 17+ (or same JDK used by your project)
-- Maven
-- MySQL (or configure your datasource)
-- Optional: XAMPP for local MySQL during development
+
+| Dependency | Version |
+|-----------|----------|
+| ☕ Java | **17+** |
+| 📦 Maven | Latest |
+| 🗄️ MySQL | 8.x (or any datasource you configure) |
+| 🖥️ Optional | XAMPP for local DB |
 
 ---
 
-## 🛠️ Setup (local)
-1. Clone repository:
+## 🛠️ Local Setup Guide
+
+### **1️⃣ Clone the repository**
 ```bash
 git clone https://github.com/yourusername/doctor-portal.git
 cd doctor-portal
-
-Configure src/main/resources/application.properties:
-
+2️⃣ Configure MySQL in application.properties
 spring.datasource.url=jdbc:mysql://localhost:3306/doctor_portal_db
 spring.datasource.username=root
 spring.datasource.password=your_password
+
 spring.jpa.hibernate.ddl-auto=update
 server.port=8081
 
-
-Build and run:
-
+3️⃣ Build & Run
 mvn clean package
 mvn spring-boot:run
 
 
-Backend will run on http://localhost:8081 (unless changed).
+➡ Backend will run at:
+http://localhost:8081
 
-📌 Important endpoints (examples)
+🔗 API Endpoints (Examples)
+➤ Create Appointment
 
-Base URL: http://localhost:8081/api
-
-POST /api/appointments — create appointment
-Body (JSON):
+POST /api/appointments
+Body
 
 {
-  "patientName":"Pranta",
-  "patientEmail":"p@gmail.com",
-  "patientPhone":"0177777777",
-  "doctorName":"Dr. Rahman",
-  "appointmentDate":"2025-11-19",
-  "appointmentTime":"14:30:00"
+  "patientName": "Pranta",
+  "patientEmail": "p@gmail.com",
+  "patientPhone": "0177777777",
+  "doctorName": "Dr. Rahman",
+  "appointmentDate": "2025-11-19",
+  "appointmentTime": "14:30:00"
 }
 
+➤ List All Appointments
+GET /api/appointments
 
-GET /api/appointments — list appointments
+➤ Get Appointment by ID
+GET /api/appointments/{id}
 
-GET /api/appointments/{id} — get one appointment
+🤝 Contributing
 
-🛠️ How to contribute
+Fork the repository
 
-Fork the repo
+Create a new branch
 
-Create a branch feature/your-feature
+git checkout -b feature/your-feature
+
 
 Commit & push
 
-Open a PR with a clear description
+Open a Pull Request with clear description
 
-Thank you — please star & fork if you find this useful! ⭐
-
-
----
-
-## Extra: how to add *more animations* to README
-- Record a short GIF of the running app (3–8 seconds) using a screen recorder (ShareX, Loom). Put `docs/demo.gif` into the repo and the README already references it.
-- Use GitHub shields for build status, license, and dependency scan badges to make the README feel alive.
-- Optionally embed a short YouTube walkthrough (screenshare) and place the YouTube link or thumbnail in the README.
-
----
-
-## Wrap-up: Quick checklist for you to finish
-1. Paste the README content into your `README.md`.
-2. Add a demo GIF file at `docs/demo.gif` or replace the link with your GIF URL.
-3. Use the secure CORS snippet in your `@Configuration` or `SecurityConfig` as shown.
-4. When teacher asks about CORS: use the provided short explanation — remember to say **CORS is browser-side, and not a DDOS measure**.
-
----
-
-If you want, I can:
-- Produce a one-page printable cheat-sheet of the CORS commands & browser console text for you to show the teacher.
-- Create the actual GIF-ready README section with example images (I can generate suggested ALT tags and exact markdown if you upload your GIFs/screenshots).
-
-Which of those would you like next?
+⭐ If this project helps you, don't forget to star the repo!
