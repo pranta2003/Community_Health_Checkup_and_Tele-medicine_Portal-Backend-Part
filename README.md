@@ -141,23 +141,29 @@ doctor-portal/
 ```bash
 git clone https://github.com/yourusername/doctor-portal.git
 cd doctor-portal
+```
 2️⃣ Configure MySQL in application.properties
+```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/doctor_portal_db
 spring.datasource.username=root
 spring.datasource.password=your_password
 
 spring.jpa.hibernate.ddl-auto=update
 server.port=8081
+```
 
 3️⃣ Build & Run
+```bash
 mvn clean package
 mvn spring-boot:run
 
 
 ➡ Backend will run at:
 http://localhost:8081
+```
 
 🔗 API Endpoints (Examples)
+```bash
 ➤ Create Appointment
 
 POST /api/appointments
@@ -177,21 +183,25 @@ GET /api/appointments
 
 ➤ Get Appointment by ID
 GET /api/appointments/{id}
+```
 
 🤝 Contributing
+```bash
 
 Fork the repository
 
 Create a new branch
 
 git checkout -b feature/your-feature
-
+```
 
 Commit & push
-
+```bash
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+```
+
 
 
 
