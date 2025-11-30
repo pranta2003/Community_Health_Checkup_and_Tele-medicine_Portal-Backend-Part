@@ -99,30 +99,29 @@ Conceptual flow of how BMI and glucose calculations pass through your backend la
 - Reusable ApiResponse model
 
 
-## **Project Structure**
----
-📦 doctor-portal
+## 📁 Project Structure
+
+```txt
+doctor-portal/
 │
-├── 📂 src
-│   ├── 📂 main
-│   │   ├── 📂 java/com/pranta/doctor_portal
-│   │   │   ├── 📁 appointment              → Appointment model, DTOs, controller, service, repo
-│   │   │   ├── 📁 user                     → User roles, security config, authentication, services
-│   │   │   ├── 📁 health                   → BMI + Glucose controllers + DTOs
-│   │   │   ├── 📁 contact                  → Contact form handling
-│   │   │   ├── 📁 common                   → ApiResponse, exception handlers, global errors
-│   │   │   └── 📄 DoctorPortalApplication.java
+├── src/
+│   ├── main/
+│   │   ├── java/com/pranta/doctor_portal/
+│   │   │   ├── appointment/              -> Appointment model, DTOs, controller, service, repo
+│   │   │   ├── user/                     -> User roles, security config, auth, services
+│   │   │   ├── health/                   -> BMI + Glucose controllers + DTOs
+│   │   │   ├── contact/                  -> Contact form handling
+│   │   │   ├── common/                   -> ApiResponse, global exceptions
+│   │   │   └── DoctorPortalApplication.java
 │   │   │
-│   │   └── 📂 resources
-│   │       ├── ⚙️ application.properties    → DB config & Spring Boot settings
-│   │       └── 📁 static                   → Frontend static assets
+│   │   └── resources/
+│   │       ├── application.properties    -> DB config & Spring Boot settings
+│   │       └── static/                   -> Frontend static assets
 │   │
-│   └── 🧪 test                             → Unit tests
+│   └── test/                             -> Unit tests
 │
-└── 📄 pom.xml                               → Maven dependencies
+└── pom.xml                               -> Maven dependencies
 
-
----
 
 ## ⚙️ Requirements
 
@@ -192,6 +191,7 @@ Commit & push
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+
 
 
 
