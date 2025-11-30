@@ -96,31 +96,30 @@ Conceptual flow of how BMI and glucose calculations pass through your backend la
 - DTO-driven communication  
 - Layered structure → Controller → Service → Repository  
 - Global Exception Handlers  
-- Reusable ApiResponse model  
+- Reusable ApiResponse model
 
+
+## **Project Structure**
 ---
-
-## 📁 Project Structure (Visual Tree)
-
 📦 doctor-portal
 │
 ├── 📂 src
-│ ├── 📂 main
-│ │ ├── 📂 java/com/pranta/doctor_portal
-│ │ │ ├── 📁 appointment – Appointment model, DTOs, controller, service, repository
-│ │ │ ├── 📁 user – User roles, authentication, security config
-│ │ │ ├── 📁 health – BMI & Glucose controllers + DTOs
-│ │ │ ├── 📁 contact – Contact form message handler
-│ │ │ ├── 📁 common – ApiResponse, exception handlers, global errors
-│ │ │ └── 📄 DoctorPortalApplication.java
-│ │ │
-│ │ └── 📂 resources
-│ │ ├── ⚙️ application.properties – DB config & Spring Boot settings
-│ │ └── 📁 static – Frontend static assets
-│ │
-│ └── 🧪 test – Unit tests
+│   ├── 📂 main
+│   │   ├── 📂 java/com/pranta/doctor_portal
+│   │   │   ├── 📁 appointment              → Appointment model, DTOs, controller, service, repo
+│   │   │   ├── 📁 user                     → User roles, security config, authentication, services
+│   │   │   ├── 📁 health                   → BMI + Glucose controllers + DTOs
+│   │   │   ├── 📁 contact                  → Contact form handling
+│   │   │   ├── 📁 common                   → ApiResponse, exception handlers, global errors
+│   │   │   └── 📄 DoctorPortalApplication.java
+│   │   │
+│   │   └── 📂 resources
+│   │       ├── ⚙️ application.properties    → DB config & Spring Boot settings
+│   │       └── 📁 static                   → Frontend static assets
+│   │
+│   └── 🧪 test                             → Unit tests
 │
-└── 📄 pom.xml – Maven dependencies
+└── 📄 pom.xml                               → Maven dependencies
 
 
 ---
@@ -193,6 +192,7 @@ Commit & push
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+
 
 
 
