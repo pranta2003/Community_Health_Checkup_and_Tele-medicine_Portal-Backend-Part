@@ -70,13 +70,6 @@ Conceptual flow of how BMI and glucose calculations pass through your backend la
 
 ![Health Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/health-flow.gif)
 
----
-
-> 💡 *All animations are conceptual — not tied to your UI — and perfectly suitable for backend documentation.*
-
-
-
----
 
 ## 🚀 Key Features
 
@@ -200,5 +193,6 @@ Commit & push
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+
 
 
