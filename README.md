@@ -13,12 +13,7 @@ A modern full-stack medical portal for small clinics & NGOs to manage community 
 
 ---
 
-## 🎬 Live Demo / Animated Preview  
-> Replace the GIF below with your own screen recording (`docs/demo.gif`).
 
-<p align="center">
-  <img src="docs/demo.gif" alt="Application Demo" width="750px">
-</p>
 
 ---
 
@@ -144,3 +139,4 @@ Commit & push
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+
