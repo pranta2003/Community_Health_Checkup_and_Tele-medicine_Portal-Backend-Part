@@ -13,6 +13,67 @@ A modern full-stack medical portal for small clinics & NGOs to manage community 
 
 ---
 
+---
+
+## 🎞️ System Flow Animations (Backend-Focused)
+
+To better visualize how the backend of the Community Health Check & Telemedicine Portal works, here are a set of conceptual animations that illustrate the architecture, request flow, API routing, authentication, and data lifecycle of the system.
+
+These animations help explain the internal process without requiring a live demo.
+
+---
+
+### 🔄 **Overall System Architecture**
+A high-level visual of how the backend, database, security layer, and frontend communicate.
+
+![System Architecture](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/architecture.gif)
+
+---
+
+### 🔐 **JWT Authentication Flow**
+This animation demonstrates how login, token generation, verification, and protected routes work.
+
+![JWT Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/jwt-flow.gif)
+
+---
+
+### 📡 **API Request Lifecycle**
+Shows how an incoming request moves through Controller → Service → Repository → Database → Response.
+
+![API Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/api-lifecycle.gif)
+
+---
+
+### 🗂️ **Appointment Creation Flow**
+Illustrates the process of creating an appointment using REST endpoints.
+
+![Appointment Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/appointment.gif)
+
+---
+
+### 🧠 **Error Handling & Global Exceptions**
+Explains how global exception handlers catch errors and return JSON ApiResponses.
+
+![Exception Handling](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/exceptions.gif)
+
+---
+
+### 🔗 **Database Operations (CRUD)**
+An animation showing how create/read/update/delete operations are handled using Spring Data JPA.
+
+![CRUD Operations](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/crud.gif)
+
+---
+
+### 🩺 **Health Utilities (BMI & Glucose)**
+Conceptual flow of how BMI and glucose calculations pass through your backend layers.
+
+![Health Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/health-flow.gif)
+
+---
+
+> 💡 *All animations are conceptual — not tied to your UI — and perfectly suitable for backend documentation.*
+
 
 
 ---
@@ -139,4 +200,5 @@ Commit & push
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+
 
