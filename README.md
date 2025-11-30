@@ -102,25 +102,25 @@ Conceptual flow of how BMI and glucose calculations pass through your backend la
 
 ## 📁 Project Structure (Visual Tree)
 
-doctor-portal/
+📦 doctor-portal
 │
-├─ src/
-│ ├─ main/
-│ │ ├─ java/com/pranta/doctor_portal/
-│ │ │ ├─ appointment/ # Appointment model, DTOs, controller, service, repo
-│ │ │ ├─ user/ # User roles, security config, auth, services
-│ │ │ ├─ health/ # BMI + Glucose controllers + DTOs
-│ │ │ ├─ contact/ # Contact form handling
-│ │ │ ├─ common/ # ApiResponse, global exceptions
-│ │ │ └─ DoctorPortalApplication.java
+├── 📂 src
+│ ├── 📂 main
+│ │ ├── 📂 java/com/pranta/doctor_portal
+│ │ │ ├── 📁 appointment – Appointment model, DTOs, controller, service, repository
+│ │ │ ├── 📁 user – User roles, authentication, security config
+│ │ │ ├── 📁 health – BMI & Glucose controllers + DTOs
+│ │ │ ├── 📁 contact – Contact form message handler
+│ │ │ ├── 📁 common – ApiResponse, exception handlers, global errors
+│ │ │ └── 📄 DoctorPortalApplication.java
 │ │ │
-│ │ └─ resources/
-│ │ ├─ application.properties
-│ │ └─ static/
+│ │ └── 📂 resources
+│ │ ├── ⚙️ application.properties – DB config & Spring Boot settings
+│ │ └── 📁 static – Frontend static assets
 │ │
-│ └─ test/
+│ └── 🧪 test – Unit tests
 │
-└─ pom.xml
+└── 📄 pom.xml – Maven dependencies
 
 
 ---
@@ -193,6 +193,7 @@ Commit & push
 Open a Pull Request with clear description
 
 ⭐ If this project helps you, don't forget to star the repo!
+
 
 
 
