@@ -1,149 +1,149 @@
-# 🌐 Community Health Check & Telemedicine Portal  
-A modern full-stack medical portal for small clinics & NGOs to manage community health checks, telemedicine sessions, and basic health utilities — powered by **Spring Boot (Backend)** and a clean **Tailwind + DaisyUI (Frontend)**.
+# 🏥 Community Health Check & Telemedicine Portal (Backend)
 
-<div align="center">
+A **production-style backend system** designed to support community healthcare services, telemedicine, and patient data management for clinics and NGOs.
 
-![size](https://img.shields.io/badge/Project%20Size-Medium-blue?style=for-the-badge)
-![license](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![development](https://img.shields.io/badge/Status-Development-yellow?style=for-the-badge)
-![spring](https://img.shields.io/badge/Backend-SpringBoot-brightgreen?style=for-the-badge)
-![frontend](https://img.shields.io/badge/Frontend-TailwindCSS-blue?style=for-the-badge)
-
-</div>
+This project demonstrates **real-world backend engineering practices** using **Spring Boot**, including secure authentication, modular architecture, and scalable API design.
 
 ---
 
----
+## 🎯 🚀 Project Vision
 
-## 🎞️ System Flow Animations (Backend-Focused)
+The goal of this system is to:
 
-To better visualize how the backend of the Community Health Check & Telemedicine Portal works, here are a set of conceptual animations that illustrate the architecture, request flow, API routing, authentication, and data lifecycle of the system.
-
-These animations help explain the internal process without requiring a live demo.
-
----
-
-### 🔄 **Overall System Architecture**
-A high-level visual of how the backend, database, security layer, and frontend communicate.
-
-![System Architecture](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/architecture.gif)
+* Digitize community healthcare services
+* Enable remote consultation via telemedicine
+* Provide scalable backend APIs for health monitoring systems
+* Serve as a foundation for future AI-powered healthcare solutions
 
 ---
 
-### 🔐 **JWT Authentication Flow**
-This animation demonstrates how login, token generation, verification, and protected routes work.
+## 🧠 🏗️ System Architecture
 
-![JWT Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/jwt-flow.gif)
+This project follows a **layered backend architecture**:
 
----
+* Controller → Handles HTTP requests
+* Service → Business logic
+* Repository → Database interaction
+* Security Layer → JWT-based authentication
 
-### 📡 **API Request Lifecycle**
-Shows how an incoming request moves through Controller → Service → Repository → Database → Response.
-
-![API Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/api-lifecycle.gif)
-
----
-
-### 🗂️ **Appointment Creation Flow**
-Illustrates the process of creating an appointment using REST endpoints.
-
-![Appointment Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/appointment.gif)
+👉 Designed with **clean code principles and scalability in mind**
 
 ---
 
-### 🧠 **Error Handling & Global Exceptions**
-Explains how global exception handlers catch errors and return JSON ApiResponses.
+## 🔐 🔒 Security Implementation
 
-![Exception Handling](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/exceptions.gif)
+* JWT Authentication
+* Role-Based Access Control (RBAC)
 
----
-
-### 🔗 **Database Operations (CRUD)**
-An animation showing how create/read/update/delete operations are handled using Spring Data JPA.
-
-![CRUD Operations](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/crud.gif)
-
----
-
-### 🩺 **Health Utilities (BMI & Glucose)**
-Conceptual flow of how BMI and glucose calculations pass through your backend layers.
-
-![Health Flow](https://raw.githubusercontent.com/PKP-Assets/health-system-architecture/main/health-flow.gif)
-
-
-## 🚀 Key Features
-
-### 🩺 **Appointment Management**
-- Patients & doctors can book/manage appointments.
-- Clean RESTful API endpoints.
-- Calendar & time-slot selection (future enhancement-ready).
-
-### 📞 **Telemedicine (Video Call)**
-- Jitsi Meet API integrated.
-- One-click online consultation.
-
-### 🧮 **Health Utilities**
-- BMI Calculator  
-- Glucose Logging  
-- Extendable design for future vitals (BP, SPO₂, etc.)
-
-### 🔐 **Security & Auth**
-- JWT Authentication  
-- Role-based Access Control → Admin, Doctor, Patient  
-- Secure API layer with CORS setup  
-
-### 🧱 **Clean Architecture**
-- DTO-driven communication  
-- Layered structure → Controller → Service → Repository  
-- Global Exception Handlers  
-- Reusable ApiResponse model
-
-
-## 📁 Project Structure
-
-```txt
-doctor-portal/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/com/pranta/doctor_portal/
-│   │   │   ├── appointment/              -> Appointment model, DTOs, controller, service, repo
-│   │   │   ├── user/                     -> User roles, security config, auth, services
-│   │   │   ├── health/                   -> BMI + Glucose controllers + DTOs
-│   │   │   ├── contact/                  -> Contact form handling
-│   │   │   ├── common/                   -> ApiResponse, global exceptions
-│   │   │   └── DoctorPortalApplication.java
-│   │   │
-│   │   └── resources/
-│   │       ├── application.properties    -> DB config & Spring Boot settings
-│   │       └── static/                   -> Frontend static assets
-│   │
-│   └── test/                             -> Unit tests
-│
-└── pom.xml                               -> Maven dependencies
-
-
-```
-## ⚙️ Requirements
-
-| Dependency | Version |
-|-----------|----------|
-| ☕ Java | **17+** |
-| 📦 Maven | Latest |
-| 🗄️ MySQL | 8.x (or any datasource you configure) |
-| 🖥️ Optional | XAMPP for local DB |
+  * 👨‍⚕️ Doctor
+  * 🧑 Patient
+  * 🛠️ Admin
+* Protected API endpoints
+* Secure request validation
 
 ---
 
-## 🛠️ Local Setup Guide
+## ⚙️ ⚡ Core Features
 
-### **1️⃣ Clone the repository**
+### 🩺 Appointment Management
+
+* Create, update, and manage appointments
+* Structured REST APIs
+* Designed for future calendar integration
+
+---
+
+### 📞 Telemedicine Integration
+
+* Integrated with **Jitsi Meet API**
+* Supports real-time video consultations
+
+---
+
+### 🧮 Health Utilities
+
+* BMI Calculation
+* Glucose Tracking
+* Easily extendable for additional health metrics
+
+---
+
+### 🧱 Backend Engineering Highlights
+
+* DTO-based request/response handling
+* Global exception handling system
+* Standardized API responses
+* Clean modular structure
+
+---
+
+## 📡 🔄 Backend Flow Highlights
+
+This project includes conceptual system flow animations that demonstrate:
+
+* System architecture
+* JWT authentication flow
+* API request lifecycle
+* Appointment workflow
+* Exception handling
+* CRUD operations
+
+📌 These help visualize real backend processes without needing a live demo
+
+
+---
+
+## 🧪 🧰 Tech Stack
+
+| Category   | Technology            |
+| ---------- | --------------------- |
+| Backend    | Spring Boot           |
+| Language   | Java                  |
+| Database   | MySQL                 |
+| Security   | Spring Security + JWT |
+| Build Tool | Maven                 |
+| API Style  | RESTful               |
+
+---
+
+## 📁 🗂️ Project Structure
+
 ```bash
-git clone https://github.com/yourusername/doctor-portal.git
-cd doctor-portal
+src/main/java/com/pranta/doctor_portal
+
+├── appointment/     # Appointment module
+├── user/            # Authentication & user management
+├── health/          # Health utilities (BMI, Glucose)
+├── contact/         # Contact handling
+├── common/          # API response & global exceptions
 ```
-2️⃣ Configure MySQL in application.properties
+
+---
+
+## 🧑‍💻 👨‍🔬 My Contribution
+
+As a backend developer, I focused on:
+
+* Designing RESTful APIs
+* Implementing JWT-based authentication
+* Building modular service architecture
+* Creating reusable DTO and response models
+* Structuring clean and maintainable backend code
+
+---
+
+## 🚀 🛠️ Local Setup
+
+### Clone Repository
+
 ```bash
+git clone https://github.com/pranta2003/Community_Health_Checkup_and_Tele-medicine_Portal-Backend-Part
+cd Community_Health_Checkup_and_Tele-medicine_Portal-Backend-Part
+```
+
+### Configure Database
+
+```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/doctor_portal_db
 spring.datasource.username=root
 spring.datasource.password=your_password
@@ -152,60 +152,64 @@ spring.jpa.hibernate.ddl-auto=update
 server.port=8081
 ```
 
-3️⃣ Build & Run
+### Run Application
+
 ```bash
-mvn clean package
+mvn clean install
 mvn spring-boot:run
-
-
-➡ Backend will run at:
-http://localhost:8081
 ```
 
-🔗 API Endpoints (Examples)
-```bash
-➤ Create Appointment
+---
 
+## 📌 🔗 Example API
+
+```http
 POST /api/appointments
-Body
+```
 
+```json
 {
   "patientName": "Pranta",
   "patientEmail": "p@gmail.com",
-  "patientPhone": "0177777777",
   "doctorName": "Dr. Rahman",
-  "appointmentDate": "2025-11-19",
-  "appointmentTime": "14:30:00"
+  "appointmentDate": "2025-11-19"
 }
-
-➤ List All Appointments
-GET /api/appointments
-
-➤ Get Appointment by ID
-GET /api/appointments/{id}
 ```
 
-🤝 Contributing
-```bash
+---
 
-Fork the repository
+## 🚧 📈 Future Improvements
 
-Create a new branch
+* AI-based health prediction system
+* Advanced analytics dashboard
+* Microservices architecture migration
+* Docker containerization
 
-git checkout -b feature/your-feature
-```
+---
 
-Commit & push
-```bash
-Open a Pull Request with clear description
+## ⭐ Why This Project Matters
 
-⭐ If this project helps you, don't forget to star the repo!
-```
+This project reflects:
 
+* Real-world backend system design
+* Clean and maintainable architecture
+* Practical healthcare application
 
+👉 Built not just as a project, but as a **foundation for scalable healthcare solutions**
 
+---
 
+## 🤝 Contribution
 
+Contributions are welcome!
 
+* Fork the repo
+* Create a feature branch
+* Submit a pull request
 
+---
 
+## 📌 Final Note
+
+If you find this project useful or inspiring, consider giving it a ⭐
+It motivates continuous improvement and innovation 🚀
