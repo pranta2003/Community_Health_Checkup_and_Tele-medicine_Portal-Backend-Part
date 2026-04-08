@@ -35,9 +35,9 @@ This project follows a **layered backend architecture**:
 * JWT Authentication
 * Role-Based Access Control (RBAC)
 
-  * 👨‍⚕️ Doctor
-  * 🧑 Patient
-  * 🛠️ Admin
+  *  Doctor
+  *  Patient
+  *  Admin
 * Protected API endpoints
 * Secure request validation
 
@@ -77,7 +77,7 @@ This project follows a **layered backend architecture**:
 
 ---
 
-## 📡 🔄 Backend Flow Highlights
+## 📡 Backend Flow Highlights
 
 This project includes conceptual system flow animations that demonstrate:
 
@@ -88,7 +88,7 @@ This project includes conceptual system flow animations that demonstrate:
 * Exception handling
 * CRUD operations
 
-📌 These help visualize real backend processes without needing a live demo
+ These help visualize real backend processes without needing a live demo
 
 
 ---
@@ -120,7 +120,7 @@ src/main/java/com/pranta/doctor_portal
 
 ---
 
-## 🧑‍💻 👨‍🔬 My Contribution
+##  My Contribution
 
 As a backend developer, I focused on:
 
@@ -132,7 +132,7 @@ As a backend developer, I focused on:
 
 ---
 
-## 🚀 🛠️ Local Setup
+##  🛠️ Local Setup
 
 ### Clone Repository
 
@@ -195,11 +195,9 @@ This project reflects:
 * Clean and maintainable architecture
 * Practical healthcare application
 
-👉 Built not just as a project, but as a **foundation for scalable healthcare solutions**
-
 ---
 
-## 🤝 Contribution
+##  Contribution
 
 Contributions are welcome!
 
@@ -209,7 +207,7 @@ Contributions are welcome!
 
 ---
 
-## 📌 Final Note
+## A Note
 
 If you find this project useful or inspiring, consider giving it a ⭐
-It motivates continuous improvement and innovation 🚀
+It motivates continuous improvement and innovation .
