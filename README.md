@@ -1,99 +1,114 @@
 # 🏥 Community Health Check & Telemedicine Portal (Backend)
 
-A **production-style backend system** designed to support community healthcare services, telemedicine, and patient data management for clinics and NGOs.
+A production-oriented backend system designed to support community healthcare services, telemedicine, and patient data management for clinics, NGOs, and small healthcare providers.
 
-This project demonstrates **real-world backend engineering practices** using **Spring Boot**, including secure authentication, modular architecture, and scalable API design.
-
----
-
-## 🎯 🚀 Project Vision
-
-The goal of this system is to:
-
-* Digitize community healthcare services
-* Enable remote consultation via telemedicine
-* Provide scalable backend APIs for health monitoring systems
-* Serve as a foundation for future AI-powered healthcare solutions
+This project focuses on building a **scalable, secure, and maintainable backend** using Spring Boot, following real-world engineering practices.
 
 ---
 
-## 🧠 🏗️ System Architecture
+## 🚀 Project Overview
 
-This project follows a **layered backend architecture**:
+The goal of this system is to provide a digital backbone for community healthcare by:
 
-* Controller → Handles HTTP requests
-* Service → Business logic
-* Repository → Database interaction
-* Security Layer → JWT-based authentication
-
-👉 Designed with **clean code principles and scalability in mind**
+* Enabling remote doctor-patient interaction
+* Managing patient data and medical workflows
+* Supporting scalable API-driven health services
+* Serving as a base for future AI-powered healthcare tools
 
 ---
 
-## 🔐 🔒 Security Implementation
+## 🏗️ Architecture
 
-* JWT Authentication
-* Role-Based Access Control (RBAC)
+The project follows a **layered architecture**:
 
-  *  Doctor
-  *  Patient
-  *  Admin
-* Protected API endpoints
-* Secure request validation
+* **Controller Layer** → Handles incoming HTTP requests
+* **Service Layer** → Contains business logic
+* **Repository Layer** → Manages database operations
+* **Security Layer** → Handles authentication and authorization
+
+The structure is designed to be clean, modular, and easy to extend.
 
 ---
 
-## ⚙️ ⚡ Core Features
+## 🔐 Security
+
+Security is implemented using **Spring Security + JWT**:
+
+* Stateless authentication using JWT tokens
+* Role-Based Access Control (RBAC):
+
+  * Admin
+  * Doctor
+  * Patient
+* Protected endpoints with secure request validation
+
+---
+
+## ⚙️ Core Features
 
 ### 🩺 Appointment Management
 
-* Create, update, and manage appointments
-* Structured REST APIs
-* Designed for future calendar integration
+* Create and manage appointments
+* Structured RESTful APIs
+* Designed for future scheduling integration
 
----
+### 📞 Telemedicine Support
 
-### 📞 Telemedicine Integration
-
-* Integrated with **Jitsi Meet API**
-* Supports real-time video consultations
-
----
+* Integrated with Jitsi Meet API
+* Supports real-time video consultation sessions
 
 ### 🧮 Health Utilities
 
-* BMI Calculation
-* Glucose Tracking
+* BMI calculation
+* Glucose tracking
 * Easily extendable for additional health metrics
 
 ---
 
-### 🧱 Backend Engineering Highlights
+## 🧱 Engineering Highlights
 
-* DTO-based request/response handling
-* Global exception handling system
-* Standardized API responses
-* Clean modular structure
-
----
-
-## 📡 Backend Flow Highlights
-
-This project includes conceptual system flow animations that demonstrate:
-
-* System architecture
-* JWT authentication flow
-* API request lifecycle
-* Appointment workflow
-* Exception handling
-* CRUD operations
-
- These help visualize real backend processes without needing a live demo
-
+* DTO-based request and response handling
+* Global exception handling
+* Standardized API response format
+* Modular and maintainable codebase
 
 ---
 
-## 🧪 🧰 Tech Stack
+## 📄 API Documentation (Swagger)
+
+Interactive API documentation is available using Swagger:
+
+```
+http://localhost:8081/swagger-ui/index.html
+```
+
+Features:
+
+* Explore all endpoints
+* Test APIs directly from the browser
+* JWT authentication support via "Authorize" button
+
+---
+
+## 🐳 Docker Support
+
+The project can be run using Docker for easy setup and deployment.
+
+### Build and Run
+
+```bash
+docker-compose up --build
+```
+
+### Services
+
+* Backend → http://localhost:8081
+* Swagger UI → http://localhost:8081/swagger-ui/index.html
+* MySQL → running in container
+
+---
+
+## 🧪 Tech Stack
 
 | Category   | Technology            |
 | ---------- | --------------------- |
@@ -103,56 +118,48 @@ This project includes conceptual system flow animations that demonstrate:
 | Security   | Spring Security + JWT |
 | Build Tool | Maven                 |
 | API Style  | RESTful               |
+| Docs       | Swagger (OpenAPI)     |
+| DevOps     | Docker                |
 
 ---
 
-## 📁 🗂️ Project Structure
+## 📁 Project Structure
 
-```bash
-src/main/java/com/pranta/doctor_portal
+```
+src/main/java/com/Community/demo
 
-├── appointment/     # Appointment module
-├── user/            # Authentication & user management
-├── health/          # Health utilities (BMI, Glucose)
-├── contact/         # Contact handling
-├── common/          # API response & global exceptions
+├── controller/      # REST controllers
+├── services/        # Business logic
+├── repository/      # Database layer
+├── model/           # Entities
+├── payload/         # DTOs
+├── security/        # JWT & security config
+├── exception/       # Global exception handling
+├── config/          # App configurations (Swagger, etc.)
 ```
 
 ---
 
-##  My Contribution
+## 🛠️ Local Setup
 
-As a backend developer, I focused on:
-
-* Designing RESTful APIs
-* Implementing JWT-based authentication
-* Building modular service architecture
-* Creating reusable DTO and response models
-* Structuring clean and maintainable backend code
-
----
-
-##  🛠️ Local Setup
-
-### Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/pranta2003/Community_Health_Checkup_and_Tele-medicine_Portal-Backend-Part
 cd Community_Health_Checkup_and_Tele-medicine_Portal-Backend-Part
 ```
 
-### Configure Database
+### 2. Configure Database
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/doctor_portal_db
 spring.datasource.username=root
 spring.datasource.password=your_password
-
 spring.jpa.hibernate.ddl-auto=update
 server.port=8081
 ```
 
-### Run Application
+### 3. Run Application
 
 ```bash
 mvn clean install
@@ -161,11 +168,9 @@ mvn spring-boot:run
 
 ---
 
-## 📌 🔗 Example API
+## 📌 Example API
 
-```http
-POST /api/appointments
-```
+**POST /api/appointments**
 
 ```json
 {
@@ -178,36 +183,27 @@ POST /api/appointments
 
 ---
 
-## 🚧 📈 Future Improvements
+## 📈 Future Improvements
 
 * AI-based health prediction system
 * Advanced analytics dashboard
-* Microservices architecture migration
-* Docker containerization
+* Microservices architecture
+* Cloud deployment (AWS / Docker orchestration)
 
 ---
 
-## ⭐ Why This Project Matters
+## 🤝 Contribution
 
-This project reflects:
+Contributions are welcome.
 
-* Real-world backend system design
-* Clean and maintainable architecture
-* Practical healthcare application
-
----
-
-##  Contribution
-
-Contributions are welcome!
-
-* Fork the repo
+* Fork the repository
 * Create a feature branch
 * Submit a pull request
 
 ---
 
-## A Note
+## ⭐ Final Note
 
-If you find this project useful or inspiring, consider giving it a ⭐
-It motivates continuous improvement and innovation .
+This project represents a practical attempt to build a real-world healthcare backend system with clean architecture and production-ready practices.
+
+If you find it useful, consider giving it a ⭐
